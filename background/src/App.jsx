@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+/* eslint-enable react/jsx-key */
 import './App.css'
+import { useState} from 'react'
+import coolor from './data.mjs'
+import Button from './components/button/Button'
+import { Fragment } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  let [color, setColor] = useState("black");
+
+  /* const change = (h)=> {
+    console.log("color changed to ",h.text)
+    setColor(h.text);
+  } */
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Fragment>
+      <div className="main" style={{backgroundColor:color}}>
+        <div className="mainmain">
+            {
+                coolor.map((item, index) =>
+                  <Button key={index} {...item}  onClick={() => setColor(item.back_colour)}  />
+                ) 
+            }
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Fragment>
   )
 }
 
