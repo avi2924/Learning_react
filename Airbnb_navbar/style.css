@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    width: 6rem;
+}
+
+#globe{
+    width: 1.5rem;
+}
+
+#hamburger{
+    width:1.5rem;
+}
+
+#user{
+    width: 1.5rem;
+}
+.header{
+    width:90%;
+}
+.nav-bar{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.nav, .nav-right{
+    font-size: 1rem;
+    font-family: "Poppins" , sans-serif;
+    border-radius: 30px;
+    padding : 10px;
+    background-color: white;
+    border: none;
+    font-weight:500;
+    text-align: center;
+}
+
+.nav-right-2{
+    font-size: 1rem;
+    font-family: "Poppins" , sans-serif;
+    border-radius: 30px;
+    padding : 10px;
+    background-color: white;
+}
+
+
+
