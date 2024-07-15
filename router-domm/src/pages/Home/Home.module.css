@@ -1,0 +1,9 @@
+div{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    color: rgba(240, 240, 240, 0.87);
+}
